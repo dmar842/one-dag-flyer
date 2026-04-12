@@ -20,15 +20,21 @@ CSS custom properties defined in `:root`:
 
 ## Design Reference
 
-Follow the aesthetic of `~/401-pas/index.html` (401 Park Avenue South flyer): warm white base, light-dominant sections, centered hero with decorative frame and badge, copper/gold accents restrained to labels and hover states, border-based card interactions. Dark sections only for hero, floor plan, building stats, gallery, and footer.
+Follow the aesthetic of `~/401-pas/index.html` (401 Park Avenue South flyer): warm white base, light-dominant sections, centered hero with decorative frame and badge, copper/gold accents restrained to labels and hover states, border-based card interactions. Dark sections for hero, metrics ribbon, space features + floor plan (connected band), building stats, gallery, and footer. Light sections for about and amenities.
 
 ## Git Workflow
 
 GitHub email privacy is enabled. Every commit needs: `GIT_COMMITTER_EMAIL="170487050+dmar842@users.noreply.github.com"`
 
+## Section Structure
+
+Hero → Metrics Ribbon (5 items) → About (light) → Space Features + Floor Plan (dark band) → Building Stats (dark) → Amenities (cream) → Gallery (dark) → Footer (dark)
+
+Metrics ribbon order differs by viewport: desktop shows Premises, Size, Condition, Timing, Term. Tablet/mobile swaps Condition to the full-width lead position.
+
 ## Working with the File
 
-The file cannot be read in one pass (~488k tokens). Use `offset`/`limit` to read CSS (lines 1–650) or HTML (lines 650+). To modify images, extract base64 URIs via Python regex, rebuild HTML, and inject them back.
+The file cannot be read in one pass (~488k tokens). Use `offset`/`limit` to read CSS (lines 1–700) or HTML (lines 700+). To modify images, extract base64 URIs via Python regex, rebuild HTML, and inject them back.
 
 ## Development
 
