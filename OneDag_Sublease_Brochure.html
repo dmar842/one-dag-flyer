@@ -263,6 +263,8 @@
     letter-spacing: 0.015em;
     white-space: nowrap;
   }
+  .metric-val .short { display: none; }
+  .metric-val .full { display: inline; }
   .metric-val sup, .section-kicker sup, .gi-label sup {
     font-size: 0.6em;
     vertical-align: super;
@@ -739,12 +741,14 @@
     .section-hdr { margin-bottom: var(--sp-48); }
   }
   @media (max-width: 480px) {
-    .metrics-row { grid-template-columns: 1fr; }
+    .metrics-row { grid-template-columns: repeat(3, 1fr); }
+    .metric:first-child { grid-column: 1 / -1; border-bottom: 1px solid var(--copper-trace); }
     .metric + .metric::before { display: none; }
-    .metric:not(:last-child) { border-bottom: 1px solid var(--copper-trace); }
-    .metric { padding: var(--sp-24); }
-    .metric-val { white-space: normal; font-size: 18px; }
-    .metric:first-child { grid-column: auto; }
+    .metric { padding: var(--sp-16) var(--sp-8); }
+    .metric-val { white-space: nowrap; font-size: 14px; }
+    .metric-lbl { font-size: 8px; letter-spacing: 0.25em; }
+    .metric-val .full { display: none; }
+    .metric-val .short { display: inline; }
     .feat-grid { grid-template-columns: 1fr 1fr; }
     .feat { padding: var(--sp-32) var(--sp-24); }
     .feat-num { font-size: 44px; }
@@ -800,7 +804,7 @@
 <div class="metrics" aria-label="Key metrics">
   <div class="metrics-row">
     <div class="metric reveal"><div class="metric-val">Built, Furnished, Wired (Plug &amp; Play)</div><div class="metric-lbl">Condition</div></div>
-    <div class="metric reveal"><div class="metric-val">Through June 29<sup>th</sup>, 2031</div><div class="metric-lbl">Term</div></div>
+    <div class="metric reveal"><div class="metric-val"><span class="full">Through June 29<sup>th</sup>, 2031</span><span class="short">Thru 6/29/31</span></div><div class="metric-lbl">Term</div></div>
     <div class="metric reveal"><div class="metric-val">6,150 RSF</div><div class="metric-lbl">Size</div></div>
     <div class="metric reveal"><div class="metric-val">Partial 26<sup>th</sup> Floor</div><div class="metric-lbl">Premises</div></div>
   </div>
