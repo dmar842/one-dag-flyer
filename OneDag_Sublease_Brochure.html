@@ -718,7 +718,11 @@
   /* ━━━ RESPONSIVE ━━━ */
   @media (max-width: 1024px) {
     .metrics-row { grid-template-columns: repeat(2, 1fr); }
-    .metric:first-child { grid-column: 1 / -1; }
+    .metric:nth-child(1) { order: 3; }
+    .metric:nth-child(2) { order: 2; }
+    .metric:nth-child(3) { order: 1; grid-column: 1 / -1; }
+    .metric:nth-child(4) { order: 4; }
+    .metric:nth-child(5) { order: 5; }
     .metric:nth-child(2)::before { display: none; }
     .feat-grid { grid-template-columns: repeat(2, 1fr); }
     .am-grid { grid-template-columns: repeat(3, 1fr); }
