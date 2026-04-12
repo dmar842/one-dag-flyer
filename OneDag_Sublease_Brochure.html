@@ -344,10 +344,12 @@
      FEATURES (dark, no visible card containers)
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
   .features {
-    background: var(--white);
+    background: var(--charcoal);
     padding: var(--sp-64) 0;
-    color: var(--txt);
+    color: var(--txt-inv);
   }
+  .features .section-kicker { color: var(--copper); }
+  .features .section-heading { color: var(--txt-inv); }
   .section-kicker {
     font-size: 10px;
     letter-spacing: 0.4em;
@@ -379,13 +381,13 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1px;
-    background: var(--rule);
+    background: rgba(255,255,255,0.04);
   }
   .feat {
-    background: var(--white);
+    background: var(--charcoal);
     padding: var(--sp-16) var(--sp-16);
     text-align: left;
-    border: 1px solid var(--rule);
+    border: 1px solid var(--copper-trace);
     transition: border-color 0.35s var(--ease-out-quart);
   }
   .feat:hover {
@@ -395,19 +397,19 @@
     font-family: var(--font-display);
     font-size: 32px;
     font-weight: 400;
-    color: var(--copper);
+    color: var(--copper-lt);
     line-height: 1;
     margin-bottom: var(--sp-4);
   }
   .feat-name {
     font-size: 13px;
     font-weight: 500;
-    color: var(--txt);
+    color: var(--cream);
     letter-spacing: 0.02em;
   }
   .feat-note {
     font-size: 11px;
-    color: var(--txt2);
+    color: oklch(0.97 0.005 80 / 0.5);
     margin-top: var(--sp-4);
   }
 
@@ -416,7 +418,7 @@
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
   .plan {
     background: var(--charcoal);
-    padding: var(--sp-48) 0 var(--sp-64);
+    padding: 0 0 var(--sp-64);
   }
   .plan-download {
     display: inline-flex;
