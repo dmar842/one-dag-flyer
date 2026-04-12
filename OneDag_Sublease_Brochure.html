@@ -257,10 +257,11 @@
   }
   .metric-val {
     font-family: var(--font-display);
-    font-size: clamp(20px, 1.8vw, 26px);
+    font-size: clamp(16px, 1.6vw, 24px);
     font-weight: 500;
     color: var(--cream);
     letter-spacing: 0.015em;
+    white-space: nowrap;
   }
   .metric-val sup, .section-kicker sup, .gi-label sup {
     font-size: 0.6em;
@@ -712,6 +713,7 @@
   /* ━━━ RESPONSIVE ━━━ */
   @media (max-width: 1024px) {
     .metrics-row { grid-template-columns: repeat(2, 1fr); }
+    .metric:first-child { grid-column: 1 / -1; }
     .metric:nth-child(2)::before { display: none; }
     .feat-grid { grid-template-columns: repeat(2, 1fr); }
     .am-grid { grid-template-columns: repeat(3, 1fr); }
@@ -741,6 +743,8 @@
     .metric + .metric::before { display: none; }
     .metric:not(:last-child) { border-bottom: 1px solid var(--copper-trace); }
     .metric { padding: var(--sp-24); }
+    .metric-val { white-space: normal; font-size: 18px; }
+    .metric:first-child { grid-column: auto; }
     .feat-grid { grid-template-columns: 1fr 1fr; }
     .feat { padding: var(--sp-32) var(--sp-24); }
     .feat-num { font-size: 44px; }
