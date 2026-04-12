@@ -101,7 +101,7 @@
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(180deg, rgba(7,18,46,0.82) 0%, rgba(7,18,46,0.7) 40%, rgba(7,18,46,0.88) 100%);
+      linear-gradient(180deg, rgba(7,18,46,0.72) 0%, rgba(7,18,46,0.55) 35%, rgba(7,18,46,0.78) 100%);
   }
 
   /* Subtle cityscape silhouette */
@@ -315,11 +315,11 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      SECTION SYSTEM
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  .section { padding: var(--space-4xl) 0; }
-  .section--tight { padding: var(--space-3xl) 0; }
+  .section { padding: var(--space-3xl) 0; }
+  .section--tight { padding: var(--space-2xl) 0; }
 
   .section-header {
-    margin-bottom: var(--space-3xl);
+    margin-bottom: var(--space-2xl);
   }
 
   .eyebrow {
@@ -481,7 +481,10 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      SPACE FEATURES
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  .features { background: var(--off-white); }
+  .features {
+    background: var(--off-white);
+    background-image: radial-gradient(circle at 20% 50%, rgba(201,168,76,0.03) 0%, transparent 50%);
+  }
   .features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -600,7 +603,11 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      FLOOR PLAN
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  .floorplan { background: var(--off-white); padding-top: 0; }
+  .floorplan {
+    background: var(--off-white);
+    padding-top: 0;
+    padding-bottom: var(--space-2xl);
+  }
   .floorplan-visual {
     position: relative;
     max-width: 900px;
@@ -619,12 +626,12 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      PHOTO GALLERY
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  .gallery { background: var(--off-white); padding-bottom: var(--space-3xl); }
+  .gallery { background: var(--off-white); padding-bottom: var(--space-2xl); }
   .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 6px;
+    gap: 8px;
   }
 
   .gallery-item {
@@ -632,6 +639,7 @@
     overflow: hidden;
     aspect-ratio: 4/3;
     cursor: pointer;
+    box-shadow: 0 2px 8px rgba(13,31,76,0.1);
   }
 
   .gallery-bg {
@@ -815,7 +823,7 @@
 
   @media (max-width: 768px) {
     .container { padding: 0 var(--space-lg); }
-    .section { padding: var(--space-3xl) 0; }
+    .section { padding: var(--space-2xl) 0; }
     .hero { min-height: 560px; }
     .hero-frame { inset: 16px; }
     .hero-address { display: none; }
@@ -961,7 +969,7 @@
     <div class="callout-inner">
       <div class="callout-icon">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.78 7.78 5.5 5.5 0 0 1 7.78-7.78zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>
         </svg>
       </div>
       <div class="callout-text">
