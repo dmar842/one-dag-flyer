@@ -14,9 +14,17 @@ Single-page marketing brochure for a **6,150 RSF sublease on the 26th floor of O
 ## Design System
 
 CSS custom properties defined in `:root`:
-- **Colors**: OKLCH palette — charcoal/black base, brass accent (hue 85), cream sections. All neutrals tinted toward brass.
+- **Colors**: OKLCH palette — midnight navy base (hue 260), warm gold accent (hue 85). Warm white (`--warm`) body bg, cream sections. All neutrals tinted toward navy.
 - **Fonts**: `--font-display` (Bodoni Moda, serif), `--font-body` (Hanken Grotesk, sans-serif)
 - **Spacing**: 4pt scale via `--sp-4` through `--sp-96`
+
+## Design Reference
+
+Follow the aesthetic of `~/401-pas/index.html` (401 Park Avenue South flyer): warm white base, light-dominant sections, centered hero with decorative frame and badge, copper/gold accents restrained to labels and hover states, border-based card interactions. Dark sections only for hero, floor plan, building stats, gallery, and footer.
+
+## Git Workflow
+
+GitHub email privacy is enabled. Every commit needs: `GIT_COMMITTER_EMAIL="170487050+dmar842@users.noreply.github.com"`
 
 ## Working with the File
 
@@ -29,3 +37,7 @@ No build step. Open `OneDag_Sublease_Brochure.html` directly in a browser:
 ```bash
 open OneDag_Sublease_Brochure.html
 ```
+
+## Previewing
+
+Playwright blocks `file://` — use `python3 -m http.server 8123` then navigate to `http://localhost:8123/OneDag_Sublease_Brochure.html`.
