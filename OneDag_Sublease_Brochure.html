@@ -162,12 +162,12 @@
     gap: var(--sp-12);
     font-family: var(--font-body);
     font-weight: 400;
-    font-size: 15px;
-    letter-spacing: 0.4em;
+    font-size: clamp(10px, 1.5vw, 15px);
+    letter-spacing: clamp(0.2em, 0.5vw, 0.4em);
     text-transform: uppercase;
     color: var(--copper-lt);
     border: 1px solid oklch(0.72 0.10 85 / 0.45);
-    padding: var(--sp-16) var(--sp-48);
+    padding: clamp(8px, 1.5vw, 16px) clamp(16px, 3vw, 48px);
     margin-bottom: var(--sp-64);
     background: oklch(0.14 0.035 260 / 0.3);
     backdrop-filter: blur(4px);
