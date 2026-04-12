@@ -101,7 +101,7 @@
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(180deg, rgba(7,18,46,0.7) 0%, rgba(7,18,46,0.55) 40%, rgba(7,18,46,0.8) 100%);
+      linear-gradient(180deg, rgba(7,18,46,0.82) 0%, rgba(7,18,46,0.7) 40%, rgba(7,18,46,0.88) 100%);
   }
 
   /* Subtle cityscape silhouette */
@@ -176,10 +176,13 @@
     font-size: 13px;
     letter-spacing: 5px;
     text-transform: uppercase;
-    color: var(--gold);
-    border: 1px solid rgba(201,168,76,0.35);
+    color: var(--gold-light);
+    border: 1px solid rgba(201,168,76,0.45);
     padding: 12px 32px;
     margin-bottom: 44px;
+    background: rgba(7,18,46,0.3);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     animation: fadeDown 0.8s var(--ease-out) 0.3s both;
   }
   .hero-badge-divider {
@@ -196,6 +199,7 @@
     color: var(--white);
     letter-spacing: -3px;
     margin-bottom: 20px;
+    text-shadow: 0 2px 20px rgba(7,18,46,0.5), 0 0 60px rgba(7,18,46,0.3);
     animation: fadeUp 0.9s var(--ease-out) 0.5s both;
   }
 
@@ -205,7 +209,8 @@
     font-size: clamp(13px, 1.8vw, 17px);
     letter-spacing: 10px;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.55);
+    color: rgba(255,255,255,0.75);
+    text-shadow: 0 1px 12px rgba(7,18,46,0.4);
     animation: fadeUp 0.9s var(--ease-out) 0.7s both;
   }
 
