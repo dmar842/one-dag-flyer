@@ -9,14 +9,18 @@ Single-page marketing brochure for a **6,150 RSF sublease on the 26th floor of O
 ## Architecture
 
 - `index.html` — redirect stub (`meta refresh` → `OneDag_Sublease_Brochure.html`)
-- `OneDag_Sublease_Brochure.html` — the entire site: HTML + inline CSS + inline JS in a single ~1.7MB file. All images are base64-encoded inline. No external assets except Google Fonts (Cormorant Garamond, Outfit).
+- `OneDag_Sublease_Brochure.html` — the entire site: HTML + inline CSS + inline JS in a single ~1.7MB file. All images are base64-encoded inline. No external assets except Google Fonts (Bodoni Moda, Hanken Grotesk).
 
 ## Design System
 
 CSS custom properties defined in `:root`:
-- **Colors**: navy (`#0d1f4c`), gold (`#c9a84c`), CBRE green (`#006a4d`), warm grays
-- **Fonts**: `--font-display` (Cormorant Garamond, serif), `--font-body` (Outfit, sans-serif)
-- **Spacing scale**: `--space-xs` through `--space-5xl` (4px–128px)
+- **Colors**: OKLCH palette — charcoal/black base, brass accent (hue 85), cream sections. All neutrals tinted toward brass.
+- **Fonts**: `--font-display` (Bodoni Moda, serif), `--font-body` (Hanken Grotesk, sans-serif)
+- **Spacing**: 4pt scale via `--sp-4` through `--sp-96`
+
+## Working with the File
+
+The file cannot be read in one pass (~488k tokens). Use `offset`/`limit` to read CSS (lines 1–650) or HTML (lines 650+). To modify images, extract base64 URIs via Python regex, rebuild HTML, and inject them back.
 
 ## Development
 
@@ -25,5 +29,3 @@ No build step. Open `OneDag_Sublease_Brochure.html` directly in a browser:
 ```bash
 open OneDag_Sublease_Brochure.html
 ```
-
-The file is large (~1.7MB) due to inline base64 images. When editing, use offset/limit to read specific sections rather than loading the entire file.
