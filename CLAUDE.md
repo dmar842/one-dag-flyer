@@ -20,7 +20,7 @@ CSS custom properties defined in `:root`:
 
 ## Design Reference
 
-Follow the aesthetic of `~/401-pas/index.html` (401 Park Avenue South flyer): warm white base, light-dominant sections, centered hero with decorative frame and badge, copper/gold accents restrained to labels and hover states, border-based card interactions. Dark sections for hero, metrics ribbon, space features + floor plan (connected band), building stats, gallery, and footer. Light sections for about and amenities.
+Follow the aesthetic of `~/Documents/GitHub/401-PAS/index.html` (401 Park Avenue South flyer): warm white base, light-dominant sections, centered hero with decorative frame and badge, copper/gold accents restrained to labels and hover states, border-based card interactions. Dark sections for hero, metrics ribbon, space features + floor plan (connected band), building stats, gallery, and footer. Light sections for about and amenities.
 
 ## Git Workflow
 
@@ -28,9 +28,7 @@ GitHub email privacy is enabled. Every commit needs: `GIT_COMMITTER_EMAIL="17048
 
 ## Section Structure
 
-Hero → Metrics Ribbon (5 items) → About (light) → Space Features + Floor Plan (dark band) → Building Stats (dark) → Amenities (cream) → Gallery (dark) → Footer (dark)
-
-Metrics ribbon order differs by viewport: desktop shows Premises, Size, Condition, Timing, Term. Tablet/mobile swaps Condition to the full-width lead position.
+Hero → Details (dark, GoodRX-style centered spread with floor plan + two-column highlights/space program) → Gallery (dark) → Building Stats (dark) → Amenities (cream) → Footer (dark)
 
 ## Working with the File
 
